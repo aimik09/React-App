@@ -8,12 +8,29 @@ export default function TextForm(props) {
         setText(newtext)
     }
 
+    const handleClearText =() => {
+
+
+      let newText = '';
+      setText(newText)
+      
+
+    }
+
+    const handleExtractEmail = () =>{
+
+      let newText = "";
+      setText(newText)
+
+    }
+
     const handleOnChange = (event) =>{
         setText(event.target.value);
     }
     const [text, setText] = useState('Enter Text Here2');
     //text = "new text"; // wrong way to change the state
     //setText("new Text"); //Correct way to change the state
+
   return (
     <div>
 <h2>{props.heading}</h2>
@@ -22,6 +39,12 @@ export default function TextForm(props) {
 
 </div>
 <button className="btn btn-primary"  onClick={handleUpClick}>Convert to Uper Case</button>
+
+<button className="btn btn-primary"  onClick={handleClearText}>Clear Text</button>
+
+<button className="btn btn-primary"  onClick={handleExtractEmail}>Extract your Email</button>
+
+
     </div>
   )
 }
