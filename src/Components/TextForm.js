@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = () =>{
-        console.log("Upper case was Clicked" + text);
         let newtext = text.toLocaleUpperCase();
 
         setText(newtext)
@@ -17,16 +16,30 @@ export default function TextForm(props) {
 
     }
 
-    const handleExtractEmail = () =>{
+    // const handleCaptialText = () =>{
 
-      let newText = "";
-      setText(newText)
+    //   let newText = text.;
+    //   setText(newText)
 
-    }
-
+    // }
+//
     const handleOnChange = (event) =>{
         setText(event.target.value);
     }
+    const handleCopy =() =>
+    {
+      console.log ("I'm Copy");
+      var text = document.getElementById ("mytext");
+      text.select();
+      navigator.clipboard.writeText(text.value);
+    }
+
+    const handleExtraSpace =() =>{
+
+      let newText = text.split(/[ ]+/);
+      setText(newText.join(" "))
+    }
+
     const [text, setText] = useState('Enter Text Here2');
     //text = "new text"; // wrong way to change the state
     //setText("new Text"); //Correct way to change the state
@@ -41,8 +54,10 @@ export default function TextForm(props) {
 <button className="btn btn-primary"  onClick={handleUpClick}>Convert to Uper Case</button>
 
 <button className="btn btn-primary"  onClick={handleClearText}>Clear Text</button>
+<button className="btn btn-primary"  onClick={handleCopy}>Copy Text</button>
+<button className="btn btn-primary"  onClick={handleExtraSpace}>Extra Space </button>
 
-<button className="btn btn-primary"  onClick={handleExtractEmail}>Extract your Email</button>
+{/* <button className="btn btn-primary"  onClick={handleCaptialText}>Capitalize Text</button> */}
 
 
     </div>
