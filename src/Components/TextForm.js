@@ -45,21 +45,23 @@ export default function TextForm(props) {
     //setText("new Text"); //Correct way to change the state
 
   return (
-    <div>
-<h2>{props.heading}</h2>
-<div className="mb-3">
-<textarea className="form-control" value = {text} onChange={handleOnChange} id="mytext" rows="3"></textarea>
+    <>
+  <div className= "Container" style={{color : props.mode=== 'dark'?'white': '#1c1e5a' }}>
 
-</div>
-<button className="btn btn-primary"  onClick={handleUpClick}>Convert to Uper Case</button>
+  <h2>{props.heading}</h2>
 
-<button className="btn btn-primary"  onClick={handleClearText}>Clear Text</button>
-<button className="btn btn-primary"  onClick={handleCopy}>Copy Text</button>
-<button className="btn btn-primary"  onClick={handleExtraSpace}>Extra Space </button>
+  <div className="mb-3">
 
-{/* <button className="btn btn-primary"  onClick={handleCaptialText}>Capitalize Text</button> */}
+<textarea className="form-control" value = {text} onChange={handleOnChange} style={{backgroundColor : props.mode=== 'dark'?'grey': 'white', color: props.mode=== 'dark'?'white': '#1c1e5a' }}
+id="mytext" rows="3"></textarea>
 
-
-    </div>
+  </div>
+  <button className="btn btn-primary"  onClick={handleUpClick}>Convert to Uper Case</button>
+  <button className="btn btn-primary"  onClick={handleClearText}>Clear Text</button>
+  <button className="btn btn-primary"  onClick={handleCopy}>Copy Text</button>
+  <button className="btn btn-primary"  onClick={handleExtraSpace}>Extra Space </button>
+  {/* <button className="btn btn-primary"  onClick={handleCaptialText}>Capitalize Text</button> */}
+  </div>
+  </>
   )
 }
