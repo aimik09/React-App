@@ -21,12 +21,12 @@ import Alert from './Components/Alert';
       if (mode==='light'){
         setMode('dark');
         document.body.style.backgroundColor='#1c1e5a';
-        showAlert("Dark Mode Has Been Enabled", "Success");
+        showAlert("Dark Mode Has Been Enabled", "success");
       }
       else{
         setMode('light');
         document.body.style.backgroundColor='White';
-        showAlert("Light Mode Has Been Enabled", "Success");
+        showAlert("Light Mode Has Been Enabled", "success");
       }
     }
 
