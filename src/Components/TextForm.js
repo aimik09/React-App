@@ -56,10 +56,10 @@ export default function TextForm(props) {
 id="mytext" rows="3"></textarea>
 
   </div>
-  <button className="btn btn-primary"  onClick={handleUpClick}>Convert to Uper Case</button>
-  <button className="btn btn-primary"  onClick={handleClearText}>Clear Text</button>
-  <button className="btn btn-primary"  onClick={handleCopy}>Copy Text</button>
-  <button className="btn btn-primary"  onClick={handleExtraSpace}>Extra Space </button>
+  <button className="btn btn-primary"  onClick={handleUpClick}>Convert to UperCase</button>
+  <button className="btn btn-primary"  onClick={handleClearText}>Clear All Text</button>
+  <button className="btn btn-primary"  onClick={handleCopy}>Copy Your Text</button>
+  <button className="btn btn-primary"  onClick={handleExtraSpace}>Remove Extra Space </button>
   {/* <button className="btn btn-primary"  onClick={handleCaptialText}>Capitalize Text</button> */}
   </div>
   </>
